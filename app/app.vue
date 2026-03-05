@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <main>
+    <HeroSection />
+    <FeaturesSection />
+    <PricingSection />
+    <TechSection />
+    <CtaSection />
+    <FooterSection />
+  </main>
 </template>
