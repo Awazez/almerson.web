@@ -283,7 +283,14 @@ try {
         Write-Host "  [ERREUR] $($response.error)" -ForegroundColor $C.Err
     }
 } catch {
-    Write-Host "  [ERREUR] $($_.Exception.Message)" -ForegroundColor $C.Err
+    $statusCode = $_.Exception.Response.StatusCode.value__
+    try {
+        $reader = [System.IO.StreamReader]::new($_.Exception.Response.GetResponseStream())
+        $body   = $reader.ReadToEnd() | ConvertFrom-Json
+        Write-Host "  [ERREUR $statusCode] $($body.message)" -ForegroundColor $C.Err
+    } catch {
+        Write-Host "  [ERREUR] $($_.Exception.Message)" -ForegroundColor $C.Err
+    }
 }
 
 if ($computerId) {
