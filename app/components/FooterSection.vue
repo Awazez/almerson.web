@@ -19,7 +19,7 @@
           </div>
           <p class="footer-tagline">Votre parc informatique, géré par des experts. Concentrez-vous sur votre métier.</p>
           <div class="footer-social">
-            <a href="#" class="social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/almerson/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2" fill="currentColor"/></svg>
             </a>
             <a href="#" class="social-link" aria-label="GitHub">
