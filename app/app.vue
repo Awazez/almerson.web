@@ -1,10 +1,13 @@
 <template>
-  <main>
-    <HeroSection />
-    <FeaturesSection />
-    <PricingSection />
-    <TechSection />
-    <CtaSection />
-    <FooterSection />
-  </main>
+  <div>
+    <NavBar />
+    <main>
+      <HeroSection />
+      <FeatureSection />
+      <PricingSection />
+      <TechSection />
+      <CtaSection />
+      <FooterSection />
+    </main>
+  </div>
 </template>

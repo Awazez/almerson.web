@@ -1,0 +1,25 @@
+{
+  "rewrites": [
+    { "source": "/Inventaire.ps1", "destination": "/scripts/Inventaire.ps1" },
+    { "source": "/Audit.ps1",      "destination": "/scripts/Audit.ps1" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.ps1",
+      "headers": [
+        { "key": "Content-Type",           "value": "text/plain; charset=utf-8" },
+        { "key": "Content-Disposition",    "value": "inline" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options",           "value": "DENY" },
+        { "key": "X-Content-Type-Options",    "value": "nosniff" },
+        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+      ]
+    }
+  ]
+}
